@@ -91,11 +91,6 @@ int main() {
         Poco::Dynamic::Var netconstate = Obj->get("networkConnectionState");
         Poco::Dynamic::Var netregstate = Obj->get("networkRegistrationState");
         Poco::Dynamic::Var sigquality = Obj->get("signalQuality");
-//            netstr += "\"" + net.toString() + "\"" + ",";
-//			netconstatestr += "\"" + netconstate.toString() + "\"" + ",";
-//			netregstatestr += "\"" + netregstate.toString() + "\"" + ",";
-//			sigqualitystr += "\"" + sigquality.toString() + "\"" + ",";
-
         std::string  tmpnet;
         if(net.toString()=="gen4")
             tmpnet = "WAN_4G";
@@ -119,18 +114,7 @@ int main() {
 
         if(!sigquality.toString().empty() && sigqualitystr.empty())
             sigqualitystr = "\"" + sigquality.toString() + "\"";
-
-
-//                netstr = "\"" + tmpnet + "\"";
-//                netconstatestr = "\"" + netconstate.toString() + "\"";
-//                netregstatestr = "\"" + netregstate.toString() + "\"";
-//                sigqualitystr = "\"" + sigquality.toString() + "\"";
           }
-//            netstr = "["+ netstr.substr(0, netstr.length() - 1) + "]";
-//            netconstatestr = "["+ netconstatestr.substr(0, netconstatestr.length() - 1) + "]";
-//            netregstatestr = "["+ netregstatestr.substr(0, netregstatestr.length() - 1) + "]";
-//            sigqualitystr = "["+ sigqualitystr.substr(0, sigqualitystr.length() - 1) + "]";
-
 
             if( netstr.empty())
                 netstr = "\"\"" ;
@@ -140,10 +124,6 @@ int main() {
                 netregstatestr = "\"\"" ;
             if( sigqualitystr.empty())
                 sigqualitystr = "\"\"" ;
-//    netstr=getStaData(netstr);
-//	netconstatestr=getStaData(netconstatestr);
-//	netregstatestr=getStaData(netregstatestr);
-//	sigqualitystr=getStaData(sigqualitystr);
 
     std::cout << "net===" << netstr << std::endl;
     std::cout << "netconstatestr===" << netconstatestr << std::endl;
