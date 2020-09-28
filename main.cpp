@@ -73,10 +73,6 @@ int main() {
     Poco::JSON::Parser parser;
     Poco::Dynamic::Var result;
     parser.reset();
-//    auto t = parser.asVar();
-//    if (t.isEmpty()) {
-//        std::cout << "11t ==empty" << std::endl;
-//    }
     result = parser.parse(jsonString);
     if (result.isEmpty()) {
         std::cout << "result ==empty" << std::endl;
